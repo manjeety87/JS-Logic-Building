@@ -22,6 +22,16 @@ const smallestOfThree2 = (num1, num2, num3) => {
   return smallestNumber;
 };
 
+const smallestOfThree3 = (a, b, c) => {
+  let smallestNumber = a;
+  b < smallestNumber
+    ? (smallestNumber = b)
+    : c < smallestNumber
+    ? (smallestNumber = c)
+    : (smallestNumber = a);
+  return smallestNumber;
+};
+
 console.log("Smallest Number from (2, 5, -1) is :", smallestOfThree(2, 5, -1));
 console.log(
   "Smallest Number from (-2, 5, -10) is :",
@@ -43,3 +53,22 @@ console.log(
 console.log("Smallest Number from (7, 7, 7) is :", smallestOfThree2(7, 7, 7));
 console.log("Smallest Number from (2, 7, 7) is :", smallestOfThree2(2, 7, 7));
 console.log("Smallest Number from (7, 9, -7) is :", smallestOfThree2(7, 9, -7));
+console.log("");
+console.log("");
+console.log("");
+console.log(
+  "Smallest Number using TERNARY (7, 7, 7) is :",
+  smallestOfThree3(7, 7, 7)
+);
+console.log(
+  "Smallest Number using TERNARY (2, 7, 7) is :",
+  smallestOfThree3(2, 7, 7)
+);
+console.log(
+  "Smallest Number using TERNARY (7, 7, 2) is :",
+  smallestOfThree3(7, 7, 2)
+);
+console.log(
+  "Smallest Number using TERNARY (7, 9, -7) is :",
+  smallestOfThree3(7, 9, -7)
+);

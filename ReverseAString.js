@@ -31,3 +31,18 @@ const reverseString2 = (inputString) => {
 reverseString2("Manjeet");
 reverseString2(12478);
 reverseString2("Manjeet is a begineer");
+
+const reverseString3 = (inputString) => {
+  if (typeof inputString !== "string") {
+    console.log("Please enter a string");
+    return;
+  }
+  let slpittedArray = inputString.split("");
+  let reversedArray = slpittedArray.reverse();
+  let result = reversedArray.join("");
+  console.log("SPLITTED REVERSE STRING", result);
+};
+
+reverseString3("Manjeet");
+reverseString3(12478);
+reverseString3("Manjeet is a begineer");

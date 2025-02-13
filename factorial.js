@@ -22,6 +22,20 @@ const factorial2 = (num) => {
     console.log("Enter a number to get a factorial!");
   }
 };
-factorial2('3');
+factorial2("3");
 factorial2(10);
 factorial2(5);
+
+const factorialUsingRecursion = (num) => {
+  if (num === 1 || num === 0) {
+    return 1;
+  } else {
+    return num * factorialUsingRecursion(num - 1);
+  }
+};
+
+// factorialUsingRecursion("3");
+console.log("Factorial using RECURSION",factorialUsingRecursion(10));
+console.log("Factorial using RECURSION",factorialUsingRecursion(5));
+console.log("Factorial using RECURSION",factorialUsingRecursion(3));
+console.log("Factorial using RECURSION",factorialUsingRecursion(4));

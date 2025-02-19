@@ -20,7 +20,12 @@ const table = (num, range) => {
 
 const table2 = (num, range) => {
   let count = 1;
-  if ((num > 0 && range > 0) && typeof num === "number" && typeof range === "number") {
+  if (
+    num > 0 &&
+    range > 0 &&
+    typeof num === "number" &&
+    typeof range === "number"
+  ) {
     while (true) {
       console.log(`${num} x ${count} = ${num * count}`);
       count = count + 1;
@@ -43,3 +48,28 @@ console.log("String");
 table2("5", "3");
 console.log("NUMBER");
 table2(5, 3);
+
+const table3 = (num, range) => {
+  if (
+    num > 0 &&
+    range > 0 &&
+    typeof num === "number" &&
+    typeof range === "number"
+  ) {
+    for (let i = num; i <= num * range; i = i + num) {
+      console.log(i);
+    }
+  } else {
+    console.log(`Please enter positive integer to print table!`);
+  }
+};
+table3(5, -10);
+console.log("");
+table3(5, 60);
+console.log("");
+table3(5, 3);
+console.log("");
+console.log("String");
+table3("5", "3");
+console.log("NUMBER");
+table3(5, 3);

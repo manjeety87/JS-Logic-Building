@@ -15,6 +15,7 @@ const biggestNumberInArray = (arr) => {
 };
 
 biggestNumberInArray([2, "10", 8, 7, 9, 1, "87"]);
+biggestNumberInArray([]);
 
 const biggestNumberInArray2 = (arr) => {
   if (arr.length > 0) {
@@ -26,3 +27,4 @@ const biggestNumberInArray2 = (arr) => {
 };
 
 biggestNumberInArray2([2, "10", 8, 7, 9, 1, "101", "87", 99]);
+biggestNumberInArray2([]);

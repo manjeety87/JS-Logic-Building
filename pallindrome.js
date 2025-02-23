@@ -46,3 +46,28 @@ checkPallidrome2("madam");
 checkPallidrome2("Manjeet");
 checkPallidrome2(878);
 checkPallidrome2("LEVEL");
+
+console.log("");
+console.log("Pallinndrome using LOOPS & Manipulating the indexes");
+console.log("");
+
+const checkPallidrome3 = (str) => {
+  if (typeof str === "string") {
+    for (let i = 0; i <= str.length / 2; i++) {
+      if (str[i] !== str[str.length - 1 - i]) {
+        return false;
+      }
+      return true;
+    }
+  } else {
+    console.log("Please pass string variable to check pallindrome");
+    return false;
+  }
+};
+
+console.log("lolo", checkPallidrome3("lolo"));
+console.log("hurruh", checkPallidrome3("hurruh"));
+console.log("madam", checkPallidrome3("madam"));
+console.log("Manjeet", checkPallidrome3("Manjeet"));
+console.log("878", checkPallidrome3(878));
+console.log("LEVEL", checkPallidrome3("LEVEL"));

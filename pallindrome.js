@@ -99,3 +99,30 @@ console.log("madam", checkPallidrome4("madam"));
 console.log("Manjeet", checkPallidrome4("Manjeet"));
 console.log("878", checkPallidrome4(878));
 console.log("LEVEL", checkPallidrome4("LEVEL"));
+
+console.log("");
+console.log("Pallinndrome using SLPIT Method");
+console.log("");
+
+const checkPallidrome5 = (str) => {
+  if (typeof str === "string") {
+    let strLowerCase = str.toLowerCase();
+    let strArray = strLowerCase.split("");
+    let reverserStrArr = strArray.reverse();
+    let reverseStr = reverserStrArr.join("");
+    console.log(
+      strLowerCase === reverseStr
+        ? `${str} is Pallindrome`
+        : `${str} is Not Pallindrome`
+    );
+  } else {
+    console.log("Please pass string variable to check pallindrome");
+  }
+};
+
+checkPallidrome5("lolo");
+checkPallidrome5("hurruh");
+checkPallidrome5("madam");
+checkPallidrome5("Manjeet");
+checkPallidrome5(878);
+checkPallidrome5("LEVEL");

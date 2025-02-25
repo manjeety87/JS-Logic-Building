@@ -18,3 +18,24 @@ const countVowelAndConsonant = (str) => {
 };
 
 countVowelAndConsonant("Hello World to Manjeet");
+console.log(" ");
+
+const countVowelAndConsonant2 = (str) => {
+  const vowels = "aeiou";
+  const consonants = "bcdfghjklmnpqrstvwxyz";
+  str = str.toLowerCase();
+  str = str.replace(" ", "");
+  let vowelCount = 0;
+  let consonantsCount = 0;
+  for (let i = 0; i <= str.length; i++) {
+    if (vowels.includes(str[i])) {
+      vowelCount++;
+    } else if (consonants.includes(str[i])) {
+      consonantsCount++;
+    } else {
+      console.log("This is neither a consonant nor a vowel");
+    }
+  }
+  console.log("VOWEL", vowelCount, "CONSONANTS", consonantsCount);
+};
+countVowelAndConsonant2("Hello World to Manjeet!");
